@@ -1,4 +1,4 @@
-# Projeto Forum cursado
+# Projeto Forum
 
 ###### Material estudado na plataforma Alura
 
@@ -15,3 +15,8 @@
 ###### Protege a API com Spring Security e JWT
 ###### Monitore os endpoints com Spring Boot Actuator e Admin
 ###### Documente a API com Swagger http://ip:8080/swagger-ui.html
+
+
+##### Executar o projeto via Docker
+###### Na raiz do projeto para criar a imagem da aplicação execute: docker build -t forum .
+###### Para subir a aplicação execute: docker run -p 8080:8080 -e FORUM_DATABASE_URL='jdbc:h2:mem:alura-forum' -e FORUM_DATABASE_USERNAME='sa' -e FORUM_DATABASE_PASSWORD='' -e FORUM_JWT_SECRET='123456' forum
