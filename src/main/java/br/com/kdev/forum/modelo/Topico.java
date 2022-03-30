@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,9 +24,9 @@ public class Topico {
 	private LocalDateTime dataCriacao = LocalDateTime.now();
 	@Enumerated(EnumType.STRING)
 	private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Usuario autor;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Curso curso;
 	@OneToMany(mappedBy = "topico")
 	private List<Resposta> respostas = new ArrayList<>();

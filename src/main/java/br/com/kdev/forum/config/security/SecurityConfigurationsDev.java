@@ -14,10 +14,17 @@ public class SecurityConfigurationsDev extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-		.antMatchers("/**").permitAll()
-		.and().csrf().disable();
+		.antMatchers("/").permitAll()
+		.and().authorizeRequests().antMatchers("/console/**").permitAll()
+		.and().csrf().disable().headers().frameOptions().disable();
 	}
-	
+	/*@Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
+                .authorizeRequests().antMatchers("/console/**").permitAll();
+        httpSecurity.csrf().disable();
+        httpSecurity.headers().frameOptions().disable();
+    }*/
 }
 
 
