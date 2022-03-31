@@ -14,7 +14,7 @@
 ###### Melhore desempenho com Spring Cache
 ###### Protege a API com Spring Security e JWT
 ###### Monitore os endpoints com Spring Boot Actuator e Admin
-###### Documente a API com Swagger https://dev09-forum.herokuapp.com/swagger-ui.html
+###### Documente a API com Swagger <a href="https://dev09-forum.herokuapp.com/swagger-ui.html" target="_blank">Documentação swagger</a>
 
 
 ##### Executar o projeto via Docker
